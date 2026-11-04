@@ -82,6 +82,81 @@ The repository includes strict, deterministic Python utilities for memory manage
 
 ---
 
+## 🔗 DSH Integration: `/compact` ➔ `memctl compact`
+
+**Status: documented, not yet installed (Q-0013, HUMAN gate).** Today DSH's `/compact` does **not** run Zephyr memory compaction — verified by package sweep of `app.asar` (no hooks package exists).
+
+### What `/compact` actually is
+
+| Piece | Package | Role |
+|---|---|---|
+| `/compact` command | `@deepseek-ai/dsh-command-compact` | On-demand **conversation-context** condensation; calls `compactNow()` on the mounted backend; no arguments |
+| Automatic backend | `@deepseek-ai/dsh-compaction-basic` | Condenses history at token pressure; `auto: true` by default via an `agent/pre-step` listener |
+| Tool-result pruner | `@deepseek-ai/dsh-compaction-tool-result-pruner` | Trims oversized tool outputs (`thresholdChars: 8192`) before summarization |
+
+This condenses the **model context window**. It is a different concept from Zephyr memory compaction (`sm ➔ mm` digests) — the two are unconnected by default.
+
+### Where the config lives
+
+- **User patch layer:** `C:\Users\Rex\.dsh\profiles\desktop\cordis.patch.yml` — the file to edit (id-targeted config overrides; applied after every bundle layer).
+- **Base defaults:** inside `app.asar` ➔ `dsh/node_modules/@deepseek-ai/dsh-base/cordis.patch.yml` (read-only reference).
+- **Compaction settings** (all optional, on the `compaction-basic` entry): `thresholdRatio` (0.8), `headroomTokens` (65536), `retainRatio` (0.16) / `retainTokens`, `summarizationProvider` + `summarizationModel`, `compactionRetries` (1), `maxOverflowRetries` (1), `modelPolicies` ([]), `auto` (true).
+
+### What must be added: a bridge plugin
+
+No config key runs an external command on compaction. The supported extension point is a **Host plugin** observing session log events — compaction appends `compaction/start` / `compaction/summary` / `compaction/end`, and plugins receive them via `ctx.on("session/event", (session, event) => ...)`. Bridge design (`@local/zephyr-compact`):
+
+```js
+// index.js — spawn Zephyr memory compaction after every DSH context compaction
+import { spawn } from 'node:child_process';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+
+export const Config = {
+  type: 'object',
+  properties: {
+    workspaces: { type: 'array', items: { type: 'string' }, default: [] },
+    pythonPath: { type: 'string', default: 'python' },
+    minIntervalMs: { type: 'number', default: 60000 },
+  },
+};
+
+export function apply(ctx, config) {
+  const last = new Map();
+  const off = ctx.on('session/event', (_session, event) => {
+    if (event.type !== 'compaction/summary') return;
+    for (const ws of config.workspaces ?? []) {
+      if (!existsSync(join(ws, 'omni_index.json'))) continue;   // Zephyr workspace detector
+      const prev = last.get(ws) ?? 0;
+      if (Date.now() - prev < (config.minIntervalMs ?? 60000)) continue;
+      last.set(ws, Date.now());
+      const child = spawn(config.pythonPath ?? 'python', ['tools/memctl.py', 'compact'], {
+        cwd: ws, stdio: 'ignore',
+      });
+      child.on('exit', code => ctx.logger.info(`zephyr-compact: memctl compact exit=${code} in ${ws}`));
+    }
+  });
+  return off;  // cleanup
+}
+```
+
+With its own `cordis.patch.yml`:
+
+```yaml
+- insert:
+    - id: zephyr-compact
+      name: '@local/zephyr-compact'
+      config:
+        workspaces:
+          - 'C:\Users\Rex\AppData\Local\Programs\DeepSeek Harness\projects\Z1'
+```
+
+**Install path (per DSH plugin rules):** place the package under `.dsh\profiles\desktop\node_modules\@local\zephyr-compact\` (`package.json` with `"dsh": { "bundle": { "patch": "./cordis.patch.yml" } }`), install/enable through the Plugin Manager (`plugin_manager install_bundle`), then verify: run `/compact` in a Zephyr session ➔ `memctl compact` output appears in the host log ➔ `C3.3/spool/manifest.jsonl` gains a `pre-compact` row.
+
+**Zephyr-law notes:** the bridge only invokes `memctl compact`, which is append-only, local-only (no egress), and self-gating (compacts only rows from cycles before the current one, `NO_CANDIDATES` otherwise) — no HUMAN gate is required for the spawn itself; installing the plugin modifies the live harness config and is the gated step.
+
+---
+
 ## 📂 Repository Structure
 
     ├── C1/              # Bootstrap / Sealed Core (Read-Only)
