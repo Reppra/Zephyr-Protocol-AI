@@ -1,0 +1,24 @@
+﻿{"w":"W1","st":"done","out":"memctl.py written: stats capacity verify compact append; stdlib only; no network; append-only"}
+{"w":"W2","st":"done","out":"verify fixed: VERIFY tokens=6 missing=0 superseded_skipped=21 MATCH exit=0"}
+{"w":"W3","st":"done","out":"capacity OK exit=0: sm 28/200 3878/32768; mm 2/300 465/81920; lm 14/400 2181/122880"}
+{"w":"W4","st":"done","out":"compact proven: COMPACT cycle=1 in=20 groups=1 spool=C3.3/spool/cycle-1.jsonl sha=62e9d37b75f5 mm +193B 272->465; rerun NO_CANDIDATES"}
+{"w":"W5","st":"done","out":"guards exit 1 each: NOTE_TOO_LONG, MISSING_KEYS, BAD_TIER, BAD_JSON, fixture REFUSED"}
+{"w":"W6","st":"done","out":"C1 seal intact: CC979DA5D908 AGENTS.md; 0DF7E0E3E33F CONSTITUTION.md; E15804639496 MANIFESTO.md"}
+{"w":"W7","st":"done","out":"figures below produced by memctl.py stats --json, no hand-typed value"}
+{"w":"S1","st":"done","out":"sm bytes=3878 rows=28 bpr=138 tok=969 tok/row=34 sha12=c734ecc9f310"}
+{"w":"S2","st":"done","out":"mm bytes=465 rows=2 bpr=232 tok=116 tok/row=58 sha12=0beffe7bd74c"}
+{"w":"S3","st":"done","out":"lm bytes=2181 rows=14 bpr=155 tok=545 tok/row=38 sha12=d0ab9e8b8f97"}
+{"w":"S4","st":"done","out":"TOTAL bytes=6524 tok=1630 sm+mm+lm"}
+{"w":"S5","st":"done","out":"defects closed D1 D3 D4 D5; D2 tombstoned; 2 new defects found and closed (fixture contamination, sha invalidation on append)"}
+{"w":"W8","st":"done","out":"SUPERSEDE +4 rows total=27; R10 immutability enforced; verify VERIFY tokens=2 missing=0 superseded_skipped=22 MATCH exit=0"}
+{"w":"W9","st":"done","out":"supersede subcommand added; lm rows R-013 R-014 R-015 appended; cycle closed"}
+{"w":"S6","st":"done","out":"final mm bytes=673 rows=3 bpr=224 tok=168 tok/row=56 sha12=3944c5923f1d"}
+{"w":"S7","st":"done","out":"final TOTAL sm+mm+lm bytes=6732 tok=1682; capacity OK exit=0; C1 seal intact"}
+{"w":"S8","st":"done","out":"artifact shas: memctl.py E38020C4CC16; MEM.md 6855EF548B0C; omni_index.json F53CA8B8CB02"}
+{"w":"S9","st":"done","out":"FINAL sm bytes=4218 rows=30 bpr=140 tok=1054 tok/row=35 sha12=e8868613c08a"}
+{"w":"S10","st":"done","out":"FINAL mm bytes=673 rows=3 bpr=224 tok=168 tok/row=56 sha12=3944c5923f1d"}
+{"w":"S11","st":"done","out":"FINAL lm bytes=2902 rows=18 bpr=161 tok=725 tok/row=40 sha12=b45421a88bc3"}
+{"w":"S12","st":"done","out":"FINAL TOTAL bytes=7793 tok=1947; verify MATCH exit=0; capacity OK exit=0"}
+{"w":"S13","st":"done","out":"artifact shas measured at close: memctl.py B1B6B173BAB4; MEM.md A0C20F183491; omni_index.json 8235922321B7"}
+{"w":"S14","st":"done","out":"index c=2 cycle st=closed q=5; lm 18 rows parse OK; C1 seal intact"}
+{"w":"S15","st":"done","out":"incident: exec-add.jsonl and exec-final.jsonl removed by Remove-Item after a lock failure; content recovered from context; logged negative.md and tombstone.md"}

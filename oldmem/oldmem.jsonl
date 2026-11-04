@@ -1,0 +1,30 @@
+{"t":"OLD-0001","st":"begin","from":"C3.3/sm.jsonl","pre_sha":"e8868613c08a","rows":23,"c":2,"s":"tools/cmem.py","n":"scrap run into oldmem: cold rows out of the active workspace"}
+{"t":"E-001","so":"storage","st":"closed","n":"baseline measured: 3 files 10546 bytes before expansion","s":"tools/memsum.py@c1","c":1}
+{"t":"E-002","so":"index","st":"closed","n":"created omni_index.json, C1/SEAL.md, C2, C3 map, MEM.md, tools/memsum.py","s":"omni_index.json","c":1}
+{"t":"X-001","so":"fixture","st":"closed","n":"synthetic compact fixture row 1 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-002","so":"fixture","st":"closed","n":"synthetic compact fixture row 2 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-003","so":"fixture","st":"closed","n":"synthetic compact fixture row 3 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-004","so":"fixture","st":"closed","n":"synthetic compact fixture row 4 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-005","so":"fixture","st":"closed","n":"synthetic compact fixture row 5 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-006","so":"fixture","st":"closed","n":"synthetic compact fixture row 6 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-007","so":"fixture","st":"closed","n":"synthetic compact fixture row 7 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-008","so":"fixture","st":"closed","n":"synthetic compact fixture row 8 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-009","so":"fixture","st":"closed","n":"synthetic compact fixture row 9 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-010","so":"fixture","st":"closed","n":"synthetic compact fixture row 10 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-011","so":"fixture","st":"closed","n":"synthetic compact fixture row 11 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-012","so":"fixture","st":"closed","n":"synthetic compact fixture row 12 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-013","so":"fixture","st":"closed","n":"synthetic compact fixture row 13 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-014","so":"fixture","st":"closed","n":"synthetic compact fixture row 14 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-015","so":"fixture","st":"closed","n":"synthetic compact fixture row 15 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-016","so":"fixture","st":"closed","n":"synthetic compact fixture row 16 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-017","so":"fixture","st":"closed","n":"synthetic compact fixture row 17 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-018","so":"fixture","st":"closed","n":"synthetic compact fixture row 18 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-019","so":"fixture","st":"closed","n":"synthetic compact fixture row 19 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"X-020","so":"fixture","st":"closed","n":"synthetic compact fixture row 20 used only to test grouping","s":"C3.3/sm.jsonl","c":0}
+{"t":"E-009","so":"cycle","st":"closed","n":"cycle 2 closed: five defects fixed two new found and fixed; memctl authoritative; queue carried to cycle 3","s":"C3.2/0002/exec.jsonl","c":2}
+{"t":"OLD-0001","st":"end","rows":23,"c":2,"sha_of_bodies":"853a1321419f"}
+{"t":"OLD-0001","st":"begin","from":"C3.3/mm.jsonl","pre_sha":"3944c5923f1d","rows":3,"c":2,"s":"tools/cmem.py","n":"scrap run into oldmem: cold rows out of the active workspace"}
+{"t":"D-001","so":"storage","st":"digest","n":"baseline and index expansion complete; 5 C3.3 files 3828 bytes; C1 verified","l1_in":2,"l2_in":0,"s":"d0ab9e8b8f97 sm.jsonl; 4fdb86788aff lm.jsonl; f3b7c326ad5e tombstone; 39ff4c464159 negative; 99b972462392 positive","c":1}
+{"t":"D-001-01","so":"fixture","st":"digest","n":"digest 20 rows state closed; ids X-001,X-002,X-003,X-004,X-005,X-006+","l1_in":20,"l2_in":0,"s":"62e9d37b75f5 C3.3/spool/cycle-1.jsonl","c":1}
+{"t":"D-003","so":"tools","st":"digest","n":"cycle 2 record; five defects closed two found and closed; all figures tool-derived","l1_in":3,"l2_in":0,"s":"C3.3/spool/cycle-2.jsonl","sha":"815863f5e764","c":2}
+{"t":"OLD-0001","st":"end","rows":3,"c":2,"sha_of_bodies":"3944c5923f1d"}

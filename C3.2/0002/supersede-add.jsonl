@@ -1,0 +1,4 @@
+{"t":"D-001","c":2,"reason":"cited whole-file sha of append-only sm.jsonl and lm.jsonl; every later append invalidated it; violates R10","fix":"superseded; references preserved in C3.3/spool/manifest.jsonl"}
+{"t":"-","f":"C3.3/ledger/negative.md","sha":"39ff4c464159","c":1,"reason":"ledger appended in cycle 2; cycle-1 whole-file sha historical only"}
+{"t":"-","f":"C3.3/ledger/positive.md","sha":"99b972462392","c":1,"reason":"ledger appended in cycle 2; cycle-1 whole-file sha historical only"}
+{"t":"-","f":"C3.3/tombstone.md","sha":"f3b7c326ad5e","c":1,"reason":"tombstone appended in cycle 2; cycle-1 whole-file sha historical only"}

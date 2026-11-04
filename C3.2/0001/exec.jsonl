@@ -1,0 +1,4 @@
+{"w":"W1","st":"done","out":"baseline 3 files 10546 bytes; sha256 of AGENTS/CONSTITUTION/MANIFESTO recorded in C1/SEAL.md"}
+{"w":"W2","st":"done","out":"MEM.md 2378B; omni_index.json 2246B; C1/SEAL.md 523B; C2/README.md 285B; C3/README.md 283B; tools/memsum.py 1007B; sm.jsonl 746B; mm.jsonl 272B; lm.jsonl 2181B; positive.md 343B; negative.md 398B; tombstone.md 160B; plan 767B"}
+{"w":"W3","st":"done","out":"memsum.py C3.3 -> 5 files 3828 bytes; per-file sha12 emitted; embeds verified against writes"}
+{"w":"W4","st":"done","out":"mm.jsonl digest D-001 cites sm.jsonl sha12 4fdb86788aff and lm.jsonl sha12 d0ab9e8b8f97; 260k window, 8000 memory-token cap enforced in index"}

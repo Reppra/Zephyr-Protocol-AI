@@ -1,0 +1,3 @@
+{"t":"R-013","so":"compaction","st":"rule","n":"citation immutability: cite sha only of immutable artifacts; never whole-file sha of a live tier or ledger","s":"MEM.md","c":2}
+{"t":"R-014","so":"records","st":"rule","n":"no byte row or token figure in any record unless produced by memctl stats; hand typed figures are a defect","s":"MEM.md","c":2}
+{"t":"R-015","so":"tools","st":"rule","n":"memctl is sole authority for stats capacity verify compact supersede append; stdlib only no daemon no network","s":"tools/memctl.py","c":2}

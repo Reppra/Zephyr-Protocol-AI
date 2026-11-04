@@ -1,0 +1,19 @@
+{"t":"E-003","so":"memory","st":"live","n":"lm seeded with rule rows; mm seeded with digest of E-001 and E-002","s":"C3.3/lm.jsonl","c":1}
+{"t":"E-004","so":"harness","st":"live","n":"hard 260k window; memory read capped at 8000 tokens per cycle; deeper tier mechanics pending HUMAN go-ahead","s":"omni_index.json","c":1}
+{"t":"E-005","so":"cycle","st":"live","n":"cycle 1 open; queue Q-0002 compact and seal at cycle_end","s":"C3.1/C3.1-0002-queue.json","c":1}
+{"t":"E-006","so":"tools","st":"live","n":"memctl is now the only source of byte figures in records","s":"tools/memctl.py","c":2}
+{"t":"E-007","so":"tools","st":"live","n":"cycle 2 closes five measured defects; memctl owns stats verify capacity compact append","s":"tools/memctl.py","c":2}
+{"t":"E-008","so":"memory","st":"blocked","n":"encryption at rest undecided; gate HUMAN; Article 10 privacy; no egress either way","s":"MEM.md","c":2}
+{"t":"E-010","so":"cycle","st":"live","n":"cycle 3 open with 5 queue items; gates named: encryption decision, C2 promotion","s":"omni_index.json","c":3}
+{"t":"W31","so":"cmem","st":"closed","n":"tools/cmem.py built: R13 scrap, resident=rule/live/blocked, dry-run default, pre-image before rewrite","s":"tools/cmem.py","c":3}
+{"t":"W32","so":"cmem","st":"closed","n":"dry run measured sm 7/23 mm 0/3 lm 18/0; tiers after 3958B ~989tok; figures from cmem plan","s":"tools/cmem.py","c":3}
+{"t":"W33","so":"cmem","st":"closed","n":"applied OLD-0001: sm 30->7 rows 4218->1056B; mm 3->0 rows 673->0B; lm untouched 2902B","s":"C3.3/spool/manifest.jsonl","c":3}
+{"t":"W34","so":"cmem","st":"closed","n":"proofs: rerun cold_rows=0 idempotent; pre-images re-hash to e8868613c08a and 3944c5923f1d; bodies sha 853a1321419f","s":"oldmem/pre/","c":3}
+{"t":"W35","so":"cmem","st":"closed","n":"post gates: verify MATCH exit 0 tokens=0; capacity OK all tiers; frozen spool untouched","s":"tools/memctl.py","c":3}
+{"t":"W36","so":"doctrine","st":"closed","n":"MEM.md R13 scrap law added; index: oldmem tier pointer, cmem tool, cycle 3 open, Q-0011 oldmem work queued","s":"MEM.md","c":3}
+{"t":"T-001","so":"verify","st":"closed","n":"negative test: cited sha 000000000000 absent anywhere; supersede restores","s":"tools/memctl.py","c":3}
+{"t":"T-002","so":"verify","st":"closed","n":"negative test attempt 2: sha field cites absent hash","s":"tools/memctl.py","sha":"000000000000","c":3}
+{"t":"W37","so":"verify","st":"closed","n":"clone control: verify 0; spool mutation -> MISSING exit 1; supersede -> exit 0; R12 mechanism proven","s":"tools/memctl.py","c":3}
+{"t":"W38","so":"verify","st":"closed","n":"attempt 1 void: sha sat in note; verify reads s and sha only; T-002: verify exit 1 then supersede exit 0","s":"C3.2/0004/t002.json","c":3}
+{"t":"W39","so":"verify","st":"closed","n":"gap: post-scrap no tier cites cycle-2 sha 815863f5e764; verify scans tiers only; frozen mutation invisible; fix queued Q-0012","s":"tools/memctl.py","c":3}
+{"t":"W40","so":"verify","st":"closed","n":"records: exec rows appended; ledgers updated; index done.w10 and Q-0010 replaced by Q-0012; tmp/w10 removed recorded","s":"omni_index.json","c":3}

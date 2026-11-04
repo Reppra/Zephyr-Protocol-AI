@@ -1,0 +1,18 @@
+{"t":"R-001","so":"C1","st":"rule","n":"C1 Bootstrap sealed; AGENTS.md CONSTITUTION.md MANIFESTO.md at root read-only; hashes in C1/SEAL.md","s":"C1/SEAL.md","c":1}
+{"t":"R-002","so":"storage","st":"rule","n":"tier flow sm to mm to lm only; reverse forbidden; bodies on disk, pointers in context","s":"MEM.md","c":1}
+{"t":"R-003","so":"storage","st":"rule","n":"hard window 260k; memory tokens in context capped at 8000 per cycle or read aborts","s":"omni_index.json","c":1}
+{"t":"R-004","so":"storage","st":"rule","n":"no embeddings or vector blobs on read path; unbounded cost, unciteable output","s":"MEM.md","c":1}
+{"t":"R-005","so":"index","st":"rule","n":"omni_index.json is a router of pointers and shas, never a body store or blob","s":"omni_index.json","c":1}
+{"t":"R-006","so":"compaction","st":"rule","n":"boundary at cycle_end; 1 l1 to l2, 8 l1 or 4 l2 to l3; sha256 preserves identity","s":"MEM.md","c":1}
+{"t":"R-007","so":"compaction","st":"rule","n":"never compacted: open gates, tombstones, negatives, residuals, rule rows","s":"MEM.md","c":1}
+{"t":"R-008","so":"ledger","st":"rule","n":"ledgers append-only; failed work tombstoned, never deleted","s":"C3.3/ledger/","c":1}
+{"t":"R-009","so":"gates","st":"rule","n":"HUMAN approves irreversible, egress, financial, constitutional-risk, promotion; DEVIL veto is hard","s":"AGENTS.md","c":1}
+{"t":"R-010","so":"residual","st":"rule","n":"RESIDUAL-0001: 4 empty 0o700 scratch dirs; sandbox token loses grant at creation; no answer changes reads","s":"AGENTS.md","c":1}
+{"t":"R-011","so":"safety","st":"rule","n":"no PII, no private keys, no external or localhost egress without HUMAN gate","s":"CONSTITUTION.md","c":1}
+{"t":"R-012","so":"budget","st":"rule","n":"every plan declares token and wall budgets; on breach abort, log negative.md, report HUMAN","s":"AGENTS.md","c":1}
+{"t":"R-100","so":"parent","st":"rule","n":"parent project died on unbounded storage and token spend; cause in negative ledger; MEM.md is the correction","s":"C3.3/ledger/negative.md","c":1}
+{"t":"R-101","so":"ZEPH001","st":"live","n":"reborn cycle 1 2026-11-03; C1 hash-verified; storage is 3-tier pointer memory","s":"C1/SEAL.md","c":1}
+{"t":"R-013","so":"compaction","st":"rule","n":"citation immutability: cite sha only of immutable artifacts; never whole-file sha of a live tier or ledger","s":"MEM.md","c":2}
+{"t":"R-014","so":"records","st":"rule","n":"no byte row or token figure in any record unless produced by memctl stats; hand typed figures are a defect","s":"MEM.md","c":2}
+{"t":"R-015","so":"tools","st":"rule","n":"memctl is sole authority for stats capacity verify compact supersede append; stdlib only no daemon no network","s":"tools/memctl.py","c":2}
+{"t":"R-016","so":"compaction","st":"rule","n":"frozen spool: a spool file cited by a digest is immutable; more bodies go to a new cycle file; verify detects violation","s":"MEM.md","c":2}

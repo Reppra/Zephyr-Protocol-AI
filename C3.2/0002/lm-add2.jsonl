@@ -1,0 +1,1 @@
+{"t":"R-016","so":"compaction","st":"rule","n":"frozen spool: a spool file cited by a digest is immutable; more bodies go to a new cycle file; verify detects violation","s":"MEM.md","c":2}

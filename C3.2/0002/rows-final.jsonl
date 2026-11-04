@@ -1,0 +1,7 @@
+{"w":"S9","st":"done","out":"FINAL sm bytes=4218 rows=30 bpr=140 tok=1054 tok/row=35 sha12=e8868613c08a"}
+{"w":"S10","st":"done","out":"FINAL mm bytes=673 rows=3 bpr=224 tok=168 tok/row=56 sha12=3944c5923f1d"}
+{"w":"S11","st":"done","out":"FINAL lm bytes=2902 rows=18 bpr=161 tok=725 tok/row=40 sha12=b45421a88bc3"}
+{"w":"S12","st":"done","out":"FINAL TOTAL bytes=7793 tok=1947; verify MATCH exit=0; capacity OK exit=0"}
+{"w":"S13","st":"done","out":"artifact shas measured at close: memctl.py B1B6B173BAB4; MEM.md A0C20F183491; omni_index.json 8235922321B7"}
+{"w":"S14","st":"done","out":"index c=2 cycle st=closed q=5; lm 18 rows parse OK; C1 seal intact"}
+{"w":"S15","st":"done","out":"incident: exec-add.jsonl and exec-final.jsonl removed by Remove-Item after a lock failure; content recovered from context; logged negative.md and tombstone.md"}

@@ -1,0 +1,16 @@
+{"f":"C3.3/sm.jsonl","sha":"fa2004eacd25","st":"pre-compact","spool":"C3.3/spool/cycle-1.jsonl","rows":20,"c":1}
+{"f":"C3.3/spool/cycle-1.jsonl","sha":"62e9d37b75f5","st":"bodies","rows":20,"c":1}
+{"f":"C3.3/sm.jsonl","sha":"4d20b32f2642","st":"append","t":"E-006","c":2}
+{"f":"C3.3/sm.jsonl","sha":"2f2f503e8897","st":"append","t":"E-007","c":2}
+{"f":"C3.3/sm.jsonl","sha":"c734ecc9f310","st":"append","t":"E-008","c":2}
+{"f":"C3.3/mm.jsonl","sha":"3944c5923f1d","st":"append","t":"D-003","c":2}
+{"f":"C3.3/lm.jsonl","sha":"858a23410240","st":"append","t":"R-013,R-014,R-015","c":2}
+{"f":"C3.3/sm.jsonl","sha":"a3a6bc114dce","st":"append","t":"E-009","c":2}
+{"f":"C3.3/lm.jsonl","sha":"b45421a88bc3","st":"append","t":"R-016","c":2}
+{"f":"C3.3/sm.jsonl","sha":"e8868613c08a","st":"append","t":"E-010","c":3}
+{"f":"C3.3/sm.jsonl","sha":"9de2c88e7a67","st":"cmem-scrap","run":"OLD-0001","pre_sha":"e8868613c08a","scrapped":23,"kept":7,"to":"oldmem/oldmem.jsonl","c":2}
+{"f":"C3.3/mm.jsonl","sha":"e3b0c44298fc","st":"cmem-scrap","run":"OLD-0001","pre_sha":"3944c5923f1d","scrapped":3,"kept":0,"to":"oldmem/oldmem.jsonl","c":2}
+{"f":"C3.3/sm.jsonl","sha":"9c2adac4583e","st":"append","t":"W31,W32,W33,W34,W35,W36","c":3}
+{"f":"C3.3/sm.jsonl","sha":"c330ec3352ff","st":"append","t":"T-001","c":3}
+{"f":"C3.3/sm.jsonl","sha":"882f4c8540b0","st":"append","t":"T-002","c":3}
+{"f":"C3.3/sm.jsonl","sha":"34e24602ac8b","st":"append","t":"W37,W38,W39,W40","c":3}

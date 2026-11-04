@@ -1,0 +1,1 @@
+{"t":"T-001","so":"verify","st":"closed","n":"negative test: cited sha 000000000000 absent anywhere; supersede restores","s":"tools/memctl.py","c":3}

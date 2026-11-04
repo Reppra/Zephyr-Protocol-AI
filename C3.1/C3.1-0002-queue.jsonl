@@ -1,0 +1,4 @@
+{"id":"Q-0002","a":"compact sm.jsonl: E-001 and E-002 (closed) digest into mm, closed rows spool to C3.3/spool, increment c","ow":"MEMORY","g":"cycle_end","w":"cycle_end","p":"MEM.md"}
+{"id":"Q-0003","a":"rotate tool output out of context: write exec logs to C3.2 files, read with memsum.py not with full reads","ow":"KERNEL","g":"none","w":"each cycle","p":"tools/memsum.py"}
+{"id":"Q-0004","a":"hard cap enforced: one read per cycle of lm.jsonl only; mm on miss; sm never read by KERNEL","ow":"KERNEL","g":"none","w":"every cycle","p":"omni_index.json"}
+{"id":"Q-0005","a":"C2 promotion review: needs 3+ positive ledger entries; currently 1; reopen at 3","ow":"HUMAN","g":"promotion","w":"cycle 3","p":"C3.3/ledger/positive.md"}

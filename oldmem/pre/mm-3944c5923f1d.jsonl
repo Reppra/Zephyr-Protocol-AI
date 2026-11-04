@@ -1,0 +1,3 @@
+{"t":"D-001","so":"storage","st":"digest","n":"baseline and index expansion complete; 5 C3.3 files 3828 bytes; C1 verified","l1_in":2,"l2_in":0,"s":"d0ab9e8b8f97 sm.jsonl; 4fdb86788aff lm.jsonl; f3b7c326ad5e tombstone; 39ff4c464159 negative; 99b972462392 positive","c":1}
+{"t":"D-001-01","so":"fixture","st":"digest","n":"digest 20 rows state closed; ids X-001,X-002,X-003,X-004,X-005,X-006+","l1_in":20,"l2_in":0,"s":"62e9d37b75f5 C3.3/spool/cycle-1.jsonl","c":1}
+{"t":"D-003","so":"tools","st":"digest","n":"cycle 2 record; five defects closed two found and closed; all figures tool-derived","l1_in":3,"l2_in":0,"s":"C3.3/spool/cycle-2.jsonl","sha":"815863f5e764","c":2}

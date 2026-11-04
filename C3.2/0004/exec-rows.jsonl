@@ -1,0 +1,4 @@
+{"t":"W37","so":"verify","st":"closed","n":"clone control: verify 0; spool mutation -> MISSING exit 1; supersede -> exit 0; R12 mechanism proven","s":"tools/memctl.py","c":3}
+{"t":"W38","so":"verify","st":"closed","n":"attempt 1 void: sha sat in note; verify reads s and sha only; T-002: verify exit 1 then supersede exit 0","s":"C3.2/0004/t002.json","c":3}
+{"t":"W39","so":"verify","st":"closed","n":"gap: post-scrap no tier cites cycle-2 sha 815863f5e764; verify scans tiers only; frozen mutation invisible; fix queued Q-0012","s":"tools/memctl.py","c":3}
+{"t":"W40","so":"verify","st":"closed","n":"records: exec rows appended; ledgers updated; index done.w10 and Q-0010 replaced by Q-0012; tmp/w10 removed recorded","s":"omni_index.json","c":3}

@@ -1,0 +1,6 @@
+{"t":"W31","so":"cmem","st":"closed","n":"tools/cmem.py built: R13 scrap, resident=rule/live/blocked, dry-run default, pre-image before rewrite","s":"tools/cmem.py","c":3}
+{"t":"W32","so":"cmem","st":"closed","n":"dry run measured sm 7/23 mm 0/3 lm 18/0; tiers after 3958B ~989tok; figures from cmem plan","s":"tools/cmem.py","c":3}
+{"t":"W33","so":"cmem","st":"closed","n":"applied OLD-0001: sm 30->7 rows 4218->1056B; mm 3->0 rows 673->0B; lm untouched 2902B","s":"C3.3/spool/manifest.jsonl","c":3}
+{"t":"W34","so":"cmem","st":"closed","n":"proofs: rerun cold_rows=0 idempotent; pre-images re-hash to e8868613c08a and 3944c5923f1d; bodies sha 853a1321419f","s":"oldmem/pre/","c":3}
+{"t":"W35","so":"cmem","st":"closed","n":"post gates: verify MATCH exit 0 tokens=0; capacity OK all tiers; frozen spool untouched","s":"tools/memctl.py","c":3}
+{"t":"W36","so":"doctrine","st":"closed","n":"MEM.md R13 scrap law added; index: oldmem tier pointer, cmem tool, cycle 3 open, Q-0011 oldmem work queued","s":"MEM.md","c":3}
